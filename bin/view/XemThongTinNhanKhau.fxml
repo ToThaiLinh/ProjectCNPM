@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane fx:id="traCuuNhanKhau_form" prefHeight="518.0" prefWidth="908.0" styleClass="white-bg" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView prefHeight="524.0" prefWidth="908.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columns>
+            <TableColumn prefWidth="145.0" text="Mã nhân khẩu" />
+            <TableColumn minWidth="0.0" prefWidth="172.0" text="Họ tên" />
+            <TableColumn prefWidth="146.0" text="Số CCCD" />
+            <TableColumn prefWidth="118.0" text="Giới tính" />
+            <TableColumn prefWidth="166.0" text="Ngày sinh" />
+            <TableColumn prefWidth="160.0" text="QH với chủ hộ" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,14 +1,22 @@
 package service;
 
-import service.JDBC;
 import model.HoKhau;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.List;
 import java.sql.Connection;
+import java.util.Date;
 
 public class HoKhauService implements DAOInterface<HoKhau> {
+	
+	public HoKhauService() {
+		
+	}
+	
+	public static HoKhauService getInstance() {
+		return new HoKhauService();
+	}
 
 	@Override
 	public int insert(HoKhau t) {
@@ -22,7 +30,7 @@ public class HoKhauService implements DAOInterface<HoKhau> {
 			pst.setString(1, t.getMaHK());
 			pst.setString(2, t.getHoTenChuHo());
 			pst.setString(3, t.getDiaChi());
-			pst.setString(4,  t.getDienTich() + "");
+			pst.setDouble(4,  t.getDienTich());
 			pst.setString(5, t.getChatLuong());
 			pst.setString(6,  t.getNgayTaoHoKhau() + "");
 			pst.setString(7, t.getNgaySuaHoKhau() + "");
@@ -52,7 +60,7 @@ public class HoKhauService implements DAOInterface<HoKhau> {
 			pst.setString(1, t.getMaHK());
 			pst.setString(2, t.getHoTenChuHo());
 			pst.setString(3, t.getDiaChi());
-			pst.setString(4,  t.getDienTich() + "");
+			pst.setDouble(4,  t.getDienTich());
 			pst.setString(5, t.getChatLuong());
 			pst.setString(6,  t.getNgayTaoHoKhau() + "");
 			pst.setString(7, t.getNgaySuaHoKhau() + "");
@@ -73,16 +81,10 @@ public class HoKhauService implements DAOInterface<HoKhau> {
 		try {
 			Connection conn = JDBC.getConnection();
 			PreparedStatement pst = null;
-			String query = "INSERT INTO HOKHAU VALUES (?, ?, ?, ?, ?, ?, ?)";
+			String query = "DELETE FROM HOKHAU WHERE MaHK = ?";
 			pst = conn.prepareStatement(query);
 			
 			pst.setString(1, t.getMaHK());
-			pst.setString(2, t.getHoTenChuHo());
-			pst.setString(3, t.getDiaChi());
-			pst.setString(4,  t.getDienTich() + "");
-			pst.setString(5, t.getChatLuong());
-			pst.setString(6,  t.getNgayTaoHoKhau() + "");
-			pst.setString(7, t.getNgaySuaHoKhau() + "");
 			
 			so_dong_xoa = pst.executeUpdate();
 			conn.close();
@@ -96,20 +98,81 @@ public class HoKhauService implements DAOInterface<HoKhau> {
 
 	@Override
 	public ArrayList<HoKhau> selectAll() {
-		// TODO Auto-generated method stub
-		return null;
+		ArrayList<HoKhau> dsHoKhau = new ArrayList<HoKhau>();
+		try {
+			Connection conn = JDBC.getConnection();
+			PreparedStatement pst = null;
+			ResultSet rs = null;
+			String query = "SELECT * FROM HOKHAU";
+			pst = conn.prepareStatement(query);
+			rs = pst.executeQuery();
+			while(rs.next()) {
+				String maHK = rs.getString("MaHK");
+				String hoTenChuHo = rs.getString("HoTenChuHo");
+				String diaChi = rs.getString("DiaChi");
+				double dienTich = rs.getDouble("DienTich");
+				String chatLuong = rs.getString("ChatLuongChungCu");
+				Date ngaySuaHoKhau = rs.getDate("NgaySuaHoKhau");
+				Date ngayTaoHoKhau = rs.getDate("NgayTaoHoKhau");
+				
+				HoKhau hk = new HoKhau(maHK, hoTenChuHo, diaChi, dienTich, chatLuong, ngaySuaHoKhau, ngayTaoHoKhau);
+				dsHoKhau.add(hk);
+				
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return dsHoKhau;
 	}
 
 	@Override
 	public HoKhau selectByID(HoKhau t) {
-		// TODO Auto-generated method stub
-		return null;
+		HoKhau hk = null;
+		try {
+			Connection conn = JDBC.getConnection();
+			String query = "SELECT * FROM HOKHAU WHERE maHK = ?";
+			PreparedStatement pst = conn.prepareStatement(query);
+			pst.setString(1, t.getMaHK() );
+			ResultSet rs = pst.executeQuery();
+			hk = new HoKhau(rs.getString("MaHK"), rs.getString("HoTenChuHo"), rs.getString("DiaChi"), rs.getDouble("DienTich"),
+					rs.getString("ChatLuongChungCu"), rs.getDate("NgaySuaHoKhau"), rs.getDate("NgayTaoHoKhau"));
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return hk;
 	}
 
 	@Override
 	public ArrayList<HoKhau> selectByCondition(String condition) {
-		// TODO Auto-generated method stub
-		return null;
+		ArrayList<HoKhau> dsHoKhau = new ArrayList<HoKhau>();
+		try {
+			Connection conn = JDBC.getConnection();
+			PreparedStatement pst = null;
+			ResultSet rs = null;
+			String query = "SELECT * FROM HOKHAU WHERE " + condition;
+			pst = conn.prepareStatement(query);
+			rs = pst.executeQuery();
+			while(rs.next()) {
+				String maHK = rs.getString("MaHK");
+				String hoTenChuHo = rs.getString("HoTenChuHo");
+				String diaChi = rs.getString("DiaChi");
+				double dienTich = rs.getDouble("DienTich");
+				String chatLuong = rs.getString("ChatLuongChungCu");
+				Date ngaySuaHoKhau = rs.getDate("NgaySuaHoKhau");
+				Date ngayTaoHoKhau = rs.getDate("NgayTaoHoKhau");
+				
+				HoKhau hk = new HoKhau(maHK, hoTenChuHo, diaChi, dienTich, chatLuong, ngaySuaHoKhau, ngayTaoHoKhau);
+				dsHoKhau.add(hk);
+				
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return dsHoKhau;
 	}
 	
 }

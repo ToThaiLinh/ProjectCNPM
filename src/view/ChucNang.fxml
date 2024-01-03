@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane layoutX="4.0" layoutY="23.0" prefHeight="75.0" prefWidth="904.0" stylesheets="@dashboardDesign.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="traCuuThongTinHoGD_btn" layoutX="693.0" layoutY="17.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="190.0" stylesheets="@dashboardDesign.css" text="      Tra cứu thông tin" textFill="WHITE">
+         <styleClass>
+            <String fx:value="funct2-btn" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </Button>
+      <Button fx:id="suaThongTinHoGD_btn" layoutX="479.0" layoutY="17.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="189.0" stylesheets="@dashboardDesign.css" text="      Sửa thông tin" textFill="WHITE">
+         <styleClass>
+            <String fx:value="funct2-btn" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </Button>
+      <Button layoutX="257.0" layoutY="17.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="197.0" stylesheets="@dashboardDesign.css" text="       Xóa thông tin này" textFill="WHITE">
+         <styleClass>
+            <String fx:value="funct2-btn" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </Button>
+      <Button fx:id="themThongTinHoGD_btn" layoutX="20.0" layoutY="17.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="213.0" stylesheets="@dashboardDesign.css" text="     Thêm mới thông tin" textFill="WHITE">
+         <styleClass>
+            <String fx:value="funct2-btn" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="711.0" layoutY="45.0" size="1.5em" text="" />
+      <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="491.0" layoutY="45.0" size="1.5em" />
+      <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="274.0" layoutY="45.0" size="1.5em" />
+      <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="35.0" layoutY="46.0" size="1.5em" />
+   </children>
+   <styleClass>
+      <String fx:value="white-bg" />
+      <String fx:value="shadow" />
+   </styleClass>
+</AnchorPane>

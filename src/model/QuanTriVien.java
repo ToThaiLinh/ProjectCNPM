@@ -33,11 +33,11 @@ public class QuanTriVien {
 		this.matKhau = matKhau;
 	}
 
-	public String getmaQTV() {
+	public String getMaQTV() {
 		return maQTV;
 	}
 
-	public void setmaQTV(String maQTV) {
+	public void setMaQTV(String maQTV) {
 		this.maQTV = maQTV;
 	}
 
@@ -49,27 +49,27 @@ public class QuanTriVien {
 		this.cccd = cccd;
 	}
 
-	public String gethoTen() {
+	public String getHoTen() {
 		return hoTen;
 	}
 
-	public void sethoTen(String hoTen) {
+	public void setHoTen(String hoTen) {
 		this.hoTen = hoTen;
 	}
 
-	public Date getngaySinh() {
+	public Date getNgaySinh() {
 		return ngaySinh;
 	}
 
-	public void setngaySinh(Date ngaySinh) {
+	public void setNgaySinh(Date ngaySinh) {
 		this.ngaySinh = ngaySinh;
 	}
 
-	public String getgioiTinh() {
+	public String getGioiTinh() {
 		return gioiTinh;
 	}
 
-	public void setgioiTinh(String gioiTinh) {
+	public void setGioiTinh(String gioiTinh) {
 		this.gioiTinh = gioiTinh;
 	}
 
@@ -89,27 +89,27 @@ public class QuanTriVien {
 		this.email = email;
 	}
 
-	public String getdiaChi() {
+	public String getDiaChi() {
 		return diaChi;
 	}
 
-	public void setdiaChi(String diaChi) {
+	public void setDiaChi(String diaChi) {
 		this.diaChi = diaChi;
 	}
 
-	public String gettenTaiKhoan() {
+	public String getTenTaiKhoan() {
 		return tenTaiKhoan;
 	}
 
-	public void settenTaiKhoan(String tenTaiKhoan) {
+	public void setTenTaiKhoan(String tenTaiKhoan) {
 		this.tenTaiKhoan = tenTaiKhoan;
 	}
 
-	public String getmatKhau() {
+	public String getMatKhau() {
 		return matKhau;
 	}
 
-	public void setmatKhau(String matKhau) {
+	public void setMatKhau(String matKhau) {
 		this.matKhau = matKhau;
 	}
 	

@@ -1,7 +1,5 @@
 package test;
 
-import controller.LoginController;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,7 +9,7 @@ import javafx.stage.StageStyle;
 
 public class Main extends Application {
 	public void start(Stage stage) throws Exception {
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/Login.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/test.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         
         stage.initStyle(StageStyle.TRANSPARENT);

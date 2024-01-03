@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="themThongTinHoGD_form" prefHeight="676.0" prefWidth="1012.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="close" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="65.0" styleClass="close" stylesheets="@dashboardDesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+         <graphic>
+            <FontAwesomeIcon glyphName="CLOSE" size="1.3em" text="" />
+         </graphic>
+      </Button>
+      <AnchorPane layoutY="65.0" prefHeight="526.0" prefWidth="908.0">
+         <children>
+            <AnchorPane fx:id="themHoKhau_form" layoutX="14.0" layoutY="6.0" prefHeight="535.0" prefWidth="923.0" AnchorPane.bottomAnchor="-15.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-29.0" AnchorPane.topAnchor="6.0">
+               <children>
+                  <Label layoutX="99.0" layoutY="58.0" prefHeight="21.0" prefWidth="118.0" text="Mã nhân khẩu:">
+                     <font>
+                        <Font name="Tahoma" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="275.0" layoutY="53.0" prefHeight="31.0" prefWidth="579.0" />
+                  <TextField layoutX="276.0" layoutY="114.0" prefHeight="31.0" prefWidth="579.0" />
+                  <Label layoutX="102.0" layoutY="119.0" prefHeight="21.0" prefWidth="128.0" text="Tên thành viên:">
+                     <font>
+                        <Font name="Tahoma" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="279.0" layoutY="180.0" prefHeight="31.0" prefWidth="579.0" />
+                  <Label layoutX="102.0" layoutY="185.0" prefHeight="21.0" prefWidth="78.0" text="Số CCCD:">
+                     <font>
+                        <Font name="Tahoma" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="279.0" layoutY="374.0" prefHeight="31.0" prefWidth="579.0" />
+                  <Label layoutX="102.0" layoutY="253.0" prefHeight="21.0" prefWidth="128.0" text="Ngày sinh:">
+                     <font>
+                        <Font name="Tahoma" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="282.0" layoutY="309.0" prefHeight="31.0" prefWidth="579.0" />
+                  <Label layoutX="102.0" layoutY="314.0" prefHeight="21.0" prefWidth="118.0" text="Giới tính:">
+                     <font>
+                        <Font name="Tahoma" size="17.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="356.0" layoutY="441.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="196.0" stylesheets="@dashboardDesign.css" text="         Gửi yêu cầu sửa" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="funct4-btn" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Button>
+                  <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="375.0" layoutY="467.0" size="1.5em" wrappingWidth="20.5" />
+                  <Label layoutX="102.0" layoutY="379.0" prefHeight="21.0" prefWidth="156.0" text="Quan hệ với chủ hộ:">
+                     <font>
+                        <Font name="Tahoma" size="17.0" />
+                     </font>
+                  </Label>
+                  <DatePicker layoutX="279.0" layoutY="248.0" prefHeight="31.0" prefWidth="579.0" />
+               </children>
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="white-bg" />
+               </styleClass>
+            </AnchorPane>
+         </children>
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </AnchorPane>
+      <Button fx:id="themHoKhau_btn" layoutX="372.0" layoutY="44.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="245.0" stylesheets="@dashboardDesign.css" text="      Thêm thông tin nhân khẩu" textFill="WHITE">
+         <styleClass>
+            <String fx:value="funct3-btn" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="212.0" layoutY="41.0" size="1.5em" />
+      <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="386.0" layoutY="68.0" size="1.5em" />
+   </children>
+   <styleClass>
+      <String fx:value="white-bg" />
+      <String fx:value="shadow" />
+   </styleClass>
+</AnchorPane>

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="main_frame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test.controller_test">
    <children>
-      <FontAwesomeIcon glyphName="USER" layoutX="241.0" layoutY="244.0" size="10em" />
+      <FontAwesomeIcon glyphName="USER" layoutX="98.0" layoutY="242.0" size="10em" />
+      <Button fx:id="button_insert_pane" layoutX="382.0" layoutY="98.0" mnemonicParsing="false" onMouseClicked="#switch_pane" text="Button" />
    </children>
 </AnchorPane>

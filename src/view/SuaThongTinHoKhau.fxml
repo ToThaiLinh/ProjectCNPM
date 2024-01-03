@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane fx:id="traCuuThongTinHoGD_form" layoutX="47.0" layoutY="32.0" prefHeight="634.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="65.0" prefHeight="526.0" prefWidth="908.0">
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </AnchorPane>
+      <Button fx:id="traCuuNhanKhau_btn" layoutX="193.0" layoutY="15.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="130.0" stylesheets="@dashboardDesign.css" text="      Nhân khẩu" textFill="WHITE">
+         <styleClass>
+            <String fx:value="funct3-btn" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </Button>
+      <Button fx:id="traCuuHoKhau_btn" layoutX="33.0" layoutY="16.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="127.0" stylesheets="@dashboardDesign.css" text="      Hộ khẩu" textFill="WHITE">
+         <styleClass>
+            <String fx:value="funct3-btn" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="204.0" layoutY="41.0" size="1.5em" text="" />
+      <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="46.0" layoutY="41.0" size="1.5em" text="" />
+      <Separator layoutX="351.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="64.0" prefWidth="8.0" />
+      <TextField layoutX="421.0" layoutY="16.0" prefHeight="34.0" prefWidth="310.0" promptText="Nhập mã hộ gia đình cần tra cứu..." />
+      <Button layoutX="766.0" layoutY="17.0" mnemonicParsing="false" styleClass="funct4-btn" text="Tìm kiếm" textFill="WHITE" />
+   </children>
+   <styleClass>
+      <String fx:value="white-bg" />
+      <String fx:value="shadow" />
+   </styleClass>
+</AnchorPane>

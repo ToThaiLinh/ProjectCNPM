@@ -3,6 +3,7 @@ package model;
 import java.util.Date;
 
 public class HoKhau {
+
 	private String maHK;
 	private String hoTenChuHo;
 	private String diaChi;
@@ -81,6 +82,13 @@ public class HoKhau {
 
 	public void setNgayTaoHoKhau(Date ngayTaoHoKhau) {
 		this.ngayTaoHoKhau = ngayTaoHoKhau;
+	}
+
+	@Override
+	public String toString() {
+		return "HoKhau [maHK=" + maHK + ", hoTenChuHo=" + hoTenChuHo + ", diaChi=" + diaChi + ", dienTich=" + dienTich
+				+ ", chatLuong=" + chatLuong + ", ngaySuaHoKhau=" + ngaySuaHoKhau + ", ngayTaoHoKhau=" + ngayTaoHoKhau
+				+ "]";
 	}
 	
 	

@@ -1,16 +1,20 @@
 package model;
 
+import java.sql.Date;
+
 public class NhanKhau {
 	private String maNK;
 	private String cccd;
 	private String hoTen;
+	private Date ngaySinh;
 	private String gioiTinh;
 	
-	public NhanKhau(String maNK, String cccd, String hoTen, String gioiTinh) {
+	public NhanKhau(String maNK, String cccd, String hoTen,Date ngaySinh, String gioiTinh) {
 		super();
 		this.maNK = maNK;
 		this.cccd = cccd;
 		this.hoTen = hoTen;
+		this.ngaySinh = ngaySinh;
 		this.gioiTinh = gioiTinh;
 	}
 
@@ -18,11 +22,11 @@ public class NhanKhau {
 		
 	}
 
-	public String getmaNK() {
+	public String getMaNK() {
 		return maNK;
 	}
 
-	public void setmaNK(String maNK) {
+	public void setMaNK(String maNK) {
 		this.maNK = maNK;
 	}
 
@@ -34,20 +38,28 @@ public class NhanKhau {
 		this.cccd = cccd;
 	}
 
-	public String gethoTen() {
+	public String getHoTen() {
 		return hoTen;
 	}
 
-	public void sethoTen(String hoTen) {
+	public void setHoTen(String hoTen) {
 		this.hoTen = hoTen;
 	}
 
-	public String getgioiTinh() {
+	public String getGioiTinh() {
 		return gioiTinh;
 	}
 
-	public void setgioiTinh(String gioiTinh) {
+	public void setGioiTinh(String gioiTinh) {
 		this.gioiTinh = gioiTinh;
+	}
+
+	public Date getNgaySinh() {
+		return ngaySinh;
+	}
+
+	public void setNgaySinh(Date ngaySinh) {
+		this.ngaySinh = ngaySinh;
 	}
 	
 	
